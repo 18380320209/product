@@ -14,6 +14,7 @@
   text-align: center;
   color: #2c3e50;
 }
+@import "assets/css/base.css";
 
 #nav {
   padding: 30px;
