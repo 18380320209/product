@@ -1,8 +1,7 @@
 <template>
   <div class="home">
     <div class="top-nav">
-      <img src="@/assets/img/logo.jpg" class="advertising"/>
-      <p>...</p>
+      <img src="@/assets/img/logo.jpg" class="advertising">
     </div>
     <div>
       <div class="list-div">
@@ -40,17 +39,14 @@
     </div>
     </div>
     <div id="recommend">
-      <ul class="ul01">
-        <li class="li01">text1</li>
-        <li class="li01">text1</li>
-        <li class="li01">text1</li>
-        <li class="li01">text1</li>
-        <li class="li01">text1</li>
-        <li class="li01">text1</li>
-        <li class="li01">text1</li>
-        <li class="li01">text1</li>
-        <li class="li01">text1</li>
-        <li class="li01">text1</li>
+      <ul class="ul01" >
+        <li class="li01" v-for="item in HomeProductList" v-bind:key="item.id">
+          <div>
+            <img v-bind:src="item.images" class="li-img">
+            <h4>{{ item.name }}</h4>
+            <h5>￥{{item.price}}</h5>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -61,7 +57,32 @@
   export default {
     name: "Home",
     components: {
+    },
+    data(){
+      return{
+        HomeProductList:[
+          {
+            id:1,
+            images:require("@/assets/img/productList/cloths/cloth-text03.jpg"),
+            name:"白色短袖01",
+            price:"49.9"
+          },
+          {
+            id:1,
+            images:require("@/assets/img/productList/cloths/cloth-text03.jpg"),
+            name:"白色短袖02",
+            price:"49.9"
+          },
+          {
+            id:1,
+            images:require("@/assets/img/productList/cloths/cloth-text03.jpg"),
+            name:"白色短袖03",
+            price:"49.9"
+          }
+        ]
+      }
     }
+
 };
 </script>
 <style>
@@ -107,9 +128,25 @@
     margin-top: 20px;
     border-radius: 8%;
   }
+  .li-img{
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 5%;
+  }
+  h4{
+    margin-top: 5px;
+    font-family: 宋体;
+    text-align: center;
+  }
+  h5{
+    margin-top: -10px;
+    font-family: 宋体;
+    text-align: center;
+  }
   h2{
     font-family: 宋体;
     font-size: 20px;
+    text-align: center;
   }
   .list-div{
     background-color: white;

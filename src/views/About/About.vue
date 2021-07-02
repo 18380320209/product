@@ -1,19 +1,24 @@
 <template>
   <div class="about">
     <div class="myself" v-for="item in piclist" :key="item.id">
-      <img :src="item.images" class="headPortrait" alt="is this picture">
+      <img :src="item.images" alt="is this picture">
       <div class="head">
         <p class="head-text01">{{item.name}}</p>
         <p class="head-text02">{{item.cont}}</p>
       </div>
+      <div class="head-set">
+        <router-link to="/about/setting">
+          <img src="@/assets/img/about/set.svg" alt="this is a picture about setting" >
+        </router-link>
+      </div>
     </div>
     <div class="middle">
-      <div class="middle-item">
-        <p>笔记</p>
+        <div class="middle-item">
+        <span class="collect">收藏</span>
       </div>
-      <div class="middle-item">
-        <p>足迹</p>
-      </div>
+        <div class="middle-item">
+          <p class="footprint">足迹</p>
+        </div>
     </div>
     <div class="bottom">
 
@@ -35,7 +40,9 @@
             name:'胖头鱼',
             cont:'hello',
           }
-        ]
+        ],
+        cur:1
+
       }
     }
   }
@@ -48,7 +55,7 @@
     margin: auto;
     border-radius: 5%;
   }
-  .headPortrait{
+  .myself img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -81,7 +88,7 @@
   .middle-item{
     flex: 1;
     text-align: center;
-    margin-top: -10px;
+    margin-top: 10px;
   }
   .bottom{
     background-color: white;
@@ -90,4 +97,14 @@
     margin: auto;
     margin-top: 10px;
   }
+  .head-set img{
+    float: right;
+    height: 30px;
+    padding: 20px;
+  }
+  .footprint{
+    margin-top: 0px;
+  }
+
+
 </style>

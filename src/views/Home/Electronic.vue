@@ -18,7 +18,17 @@
           西式厨电
         </div>
       </div>
-      <div class="list-main"></div>
+      <div class="list-main">
+        <div class="listA" v-for="item in EleProductList" :key="item.id">
+          <div class="listLine">
+            <img v-bind:src="item.images" alt="Here is a picture of the items on the list" class="listImage">
+          </div>
+          <div class="listLine" >
+            <h4>{{item.name}}</h4>
+            <h5>￥{{item.price}}</h5>
+          </div>
+        </div>
+      </div>
     </div>
     </div>
 
@@ -30,7 +40,19 @@
 
 <script>
 export default {
-  name: "Electronic"
+  name: "Electronic",
+  data(){
+    return{
+      EleProductList:[
+        {
+          id:1,
+          images:require("@/assets/img/productList/cloths/cloth-text01.jpg"),
+          name:"白色短袖",
+          price:"29.9"
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -60,10 +82,26 @@ export default {
   }
   .list-main{
     background-color: white;
-    height: 500px;
     width: 95%;
     margin: auto;
     margin-top: 10px;
     border-radius: 5%;
+  }
+  .listA{
+    display: flex;
+  }
+  .listLine{
+    flex: 1;
+    text-align: left;
+  }
+
+  .listImage{
+    height: 80%;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 5%;
+
+
   }
 </style>

@@ -18,14 +18,62 @@
           牛仔裤
         </div>
       </div>
-      <div class="list-main"></div>
+      <div class="list-main">
+        <div class="listA" v-for="item in ProductList" :key="item.id">
+          <div class="listLine">
+            <img v-bind:src="item.images" alt="Here is a picture of the items on the list" class="listImage">
+          </div>
+          <div class="listLine" >
+            <h4>{{item.name}}</h4>
+            <h5>￥{{item.price}}</h5>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Cloth"
+  name: "Cloth",
+  data(){
+    return{
+      ProductList:[
+        {
+          id:1,
+          images:require("@/assets/img/productList/cloths/cloth-text01.jpg"),
+          name:"白色短袖",
+          price:"29.9"
+        },
+        {
+          id:2,
+          images:require("@/assets/img/productList/cloths/cloth-text02.jpg"),
+          name:"裙子01",
+          price:"29.9"
+        },
+        {
+          id:3,
+          images:require("@/assets/img/productList/cloths/cloth-text03.jpg"),
+          name:"白色短袖02",
+          price:"29.9"
+        },
+        {
+          id:4,
+          images:require("@/assets/img/productList/cloths/cloth-text04.jpg"),
+          name:"白色短袖03",
+          price:"9.9"
+        },
+        {
+          id:5,
+          images:require("@/assets/img/productList/cloths/cloth-text05.jpg"),
+          name:"裙子02",
+          price:"59.9"
+        },
+
+
+      ]
+    }
+  }
 }
 </script>
 
@@ -55,11 +103,27 @@ export default {
  }
  .list-main{
    background-color: white;
-   height: 500px;
    width: 95%;
    margin: auto;
    margin-top: 10px;
    border-radius: 5%;
+ }
+ .listA{
+   display: flex;
+ }
+ .listLine{
+   flex: 1;
+   text-align: left;
+ }
+
+ .listImage{
+   height: 80%;
+   width: 100px;
+   margin-top: 10px;
+   margin-left: 30px;
+   border-radius: 5%;
+
+
  }
 
 </style>

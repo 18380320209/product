@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home/Home";
 
-
 const routes = [
   {
     path: "/",
@@ -37,6 +36,48 @@ const routes = [
     name: "Electronic",
     component: () =>
         import("../views/Home/Electronic")
+  },
+  {
+    path: "/about/setting",
+    name: "Setting",
+    component: () =>
+        import("../views/About/Setting")
+  },
+  {
+    path: "/about/setting/safety",
+    name:"Safety",
+    component: () =>
+        import("../views/About/Safety")
+  },
+  {
+    path: "/about/setting/software",
+    name: "Software",
+    component: () =>
+        import("../views/About/Software")
+  },
+  {
+    path: "/about/setting/theme",
+    name: "Theme",
+    component: () =>
+        import("../views/About/Theme")
+  },
+  {
+    path: "/about/setting/information",
+    name: "information",
+    component: () =>
+        import("../views/About/Information")
+  },
+  {
+    path: "/about/Footprint",
+    name: "Footprint",
+    component: () =>
+        import("../views/About/Footprint")
+  },
+  {
+    path: "/about/Collect",
+    name: "Collect",
+    component: () =>
+        import("../views/About/Collect")
   }
 ];
 
