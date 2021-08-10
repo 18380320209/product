@@ -13,15 +13,17 @@
       </div>
     </div>
     <div class="middle">
-        <div class="middle-item">
-        <span class="collect">收藏</span>
-      </div>
-        <div class="middle-item">
-          <p class="footprint">足迹</p>
-        </div>
+      <router-link to="/about/Footprint" class="middle-item" >
+          <div class="footprint">足迹</div>
+
+      </router-link>
+      <router-link to="/about/Collect" class="middle-item">
+          <div class="collect">收藏</div>
+      </router-link>
+
     </div>
     <div class="bottom">
-
+      <router-view class="view"></router-view>
     </div>
   </div>
 </template>
@@ -91,7 +93,6 @@
     margin-top: 10px;
   }
   .bottom{
-    background-color: white;
     width: 95%;
     height: 500px;
     margin: auto;
@@ -105,6 +106,15 @@
   .footprint{
     margin-top: 0px;
   }
-
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a.router-link-exact-active {
+    color: #42b983;
+  }
+  .view{
+    padding: 10px;
+  }
 
 </style>

@@ -12,6 +12,21 @@ const routes = [
     name: "About",
     component: () =>
       import("../views/About/About.vue"),
+    children:[
+      {
+        path: "/about/Footprint",
+        name: "Footprint",
+        component: () =>
+            import("../views/About/Footprint")
+      },
+      {
+        path: "/about/Collect",
+        name: "Collect",
+        component: () =>
+            import("../views/About/Collect")
+      }
+
+    ]
   },
   {
     path: "/home/cloth",
@@ -41,7 +56,7 @@ const routes = [
     path: "/about/setting",
     name: "Setting",
     component: () =>
-        import("../views/About/Setting")
+        import("../views/About/Setting"),
   },
   {
     path: "/about/setting/safety",
@@ -67,18 +82,7 @@ const routes = [
     component: () =>
         import("../views/About/Information")
   },
-  {
-    path: "/about/Footprint",
-    name: "Footprint",
-    component: () =>
-        import("../views/About/Footprint")
-  },
-  {
-    path: "/about/Collect",
-    name: "Collect",
-    component: () =>
-        import("../views/About/Collect")
-  }
+
 ];
 
 const router = createRouter({

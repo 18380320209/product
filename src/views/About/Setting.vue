@@ -46,7 +46,7 @@
         切换账号
       </div>
       <div class="exit">
-        退出登陆
+        <Cmp/>
       </div>
     </div>
   </div>
@@ -55,8 +55,13 @@
 </template>
 
 <script>
+import Cmp from "./Cmp";
+
 export default {
   name: "Setting",
+  components:{
+    Cmp
+  },
   data(){
     return{
       myselfList:[
@@ -94,9 +99,7 @@ export default {
   .safety img{
     height: 15px;
     float: right;
-
   }
-
   h4{
     font-family: 宋体;
     font-size: 20px;
