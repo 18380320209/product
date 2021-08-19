@@ -72,20 +72,20 @@ export default {
     height: 30px;
     width: 95%;
     margin: auto;
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     margin-top: 10px;
-    border-radius: 5%;
+    border-radius: 5px;
   }
   .list-tab-bar-item{
     flex: 1;
     text-align: center;
   }
   .list-main{
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     width: 95%;
     margin: auto;
     margin-top: 10px;
-    border-radius: 5%;
+    border-radius: 5px;
   }
   .listA{
     display: flex;
@@ -100,7 +100,7 @@ export default {
     width: 100px;
     margin-top: 10px;
     margin-left: 30px;
-    border-radius: 5%;
+    border-radius: 5px;
 
 
   }

@@ -2,14 +2,32 @@
   <div class="Information">
     <img src="@/assets/img/logo.jpg" alt="this is a picture">
     <div class="information-middle" v-for="item in informationList" :key="item.id">
-      <ul>
-        <li class="li-title">用户昵称：</li>
-        <li class="li-text" >{{item.name}}</li>
-        <li class="li-title">用户性别：</li>
-        <li class="li-text">{{item.sex}}</li>
-        <li class="li-title">个性签名：</li>
-        <li class="li-text">{{item.cont}}</li>
-      </ul>
+      <div class="information-top-div">
+        <div class="information-div">
+          用户昵称：
+        </div>
+        <div class="information-p">
+          {{item.name}}
+        </div>
+      </div>
+      <hr>
+      <div class="information-top-div">
+        <div class="information-div">
+          用户性别：
+        </div>
+        <div class="information-p">
+          {{item.sex}}
+        </div>
+      </div>
+      <hr>
+      <div class="information-top-div">
+        <div class="information-div">
+          个性签名：
+        </div>
+        <div class="information-p">
+          {{item.cont}}
+        </div>
+      </div>
     </div>
 
   </div>
@@ -42,7 +60,7 @@
     border-radius: 50%;
   }
   .information-middle{
-    background-color: white;
+    background-color:rgba(250,250,250,0.5) ;
     width: 98%;
     height: 130px;
     border-radius: 5%;
@@ -50,21 +68,21 @@
   .information-middle ul{
     width: 80%;
   }
-  .li-title{
-    font-family: SimHei;
-    font-size: 18px;
-    width: 35%;
-    float: left;
-    display: block;
-    padding: 10px;
+
+  .information-top-div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 5px;
+    padding-left: 8px;
   }
-  .li-text{
-    font-size: 18px;
-    font-family: 宋体;
-    width: 50%;
+  .information-div{
+
+    height: 20px;
     float: left;
-    display: block;
-    padding: 10px;
+  }
+  .information-p{
+    margin-left: 100px;
   }
 
 

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="top-nav">
-      <img src="@/assets/img/logo.jpg" class="advertising">
+      <div class="advertising"></div>
     </div>
     <div>
       <div class="list-div">
@@ -38,7 +38,7 @@
 
     </div>
     </div>
-    <div id="recommend">
+    <div class="recommend">
       <ul class="ul01" >
         <li class="li01" v-for="item in HomeProductList" v-bind:key="item.id">
           <div>
@@ -90,10 +90,11 @@
     z-index: inherit;
   }
   .advertising{
-    height: 200px;
+    height: 150px;
     width: 95%;
-    border-radius: 10px;
-    margin-top: 10px;
+    background-color: rgba(250,250,250,0.5);
+    border-radius: 5px;
+    margin: auto;
   }
   .list-img{
     height: 40px;
@@ -106,24 +107,29 @@
     height: 80px;
     width: 95%;
     margin: auto;
-    background-color: white;
+    background-color:rgba(250,250,250,0.5);
     margin-top: 10px;
+    border-radius: 5px;
   }
   .tab-bar-item{
     flex: 1;
     text-align: center;
+  }
+  .recommend{
+    margin-top: -20px;
   }
   .ul01{
     width: 95%;
     text-align: center;
     margin-left: -30px;
   }
+
   .li01{
     width: 45%;
     float: left;
     display: block;
     height: 200px;
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     margin-left: 10px;
     margin-top: 20px;
     border-radius: 8%;
@@ -143,16 +149,19 @@
     font-family: 宋体;
     text-align: center;
   }
-  h2{
-    font-family: 宋体;
-    font-size: 20px;
-    text-align: center;
-  }
+
   .list-div{
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     width: 95%;
     height: 30px;
     margin: auto;
+    border-radius: 5px;
+  }
+  h2{
+    font-size: 15px;
+    padding-top: 5px;
+    text-align: center;
+    font-family: 微软雅黑;
   }
   #tab-bar a {
     font-weight: bold;

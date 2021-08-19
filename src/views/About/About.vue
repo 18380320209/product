@@ -51,11 +51,11 @@
 </script>
 <style>
   .myself{
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     width: 95%;
     height: 70px;
     margin: auto;
-    border-radius: 5%;
+    border-radius: 5px;
   }
   .myself img{
     width: 60px;
@@ -79,11 +79,11 @@
     font-family: 宋体;
   }
   .middle{
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     width: 95%;
     height: 40px;
     margin: auto;
-    border-radius: 5%;
+    border-radius: 5px;
     margin-top: 10px;
     display: flex;
   }
@@ -111,7 +111,7 @@
     color: black;
   }
   a.router-link-exact-active {
-    color: #42b983;
+    color: blueviolet;
   }
   .view{
     padding: 10px;

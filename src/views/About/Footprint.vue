@@ -48,11 +48,11 @@ export default {
 <style scoped>
   .footTop{
     float: left;
-    background-color: white;
+    background-color:rgba(250,250,250,0.5);
     width: 108%;
     margin-left: -10px;
     height: 30px;
-    border-radius: 8%;
+    border-radius: 5px;
   }
   .ul02{
     width: 100%;
@@ -64,9 +64,9 @@ export default {
     float: left;
     display: block;
     height: 200px;
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     margin-top: 20px;
-    border-radius: 8%;
+    border-radius: 5px;
     margin-left: 13px;
   }
   .li02-img{

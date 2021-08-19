@@ -12,11 +12,12 @@ const routes = [
     name: "About",
     component: () =>
       import("../views/About/About.vue"),
+    redirect:'/about/Footprint',
     children:[
       {
         path: "/about/Footprint",
         name: "Footprint",
-        component: () =>
+        component:() =>
             import("../views/About/Footprint")
       },
       {
@@ -25,7 +26,6 @@ const routes = [
         component: () =>
             import("../views/About/Collect")
       }
-
     ]
   },
   {
@@ -82,6 +82,27 @@ const routes = [
     component: () =>
         import("../views/About/Information")
   },
+  {
+    path: "/land/landing",
+    name: "Landing",
+    component: () =>
+        import("../views/Land/Landing"),
+    redirect: "/land/login",
+    children: [
+      {
+        path: "/land/login",
+        name: "Login",
+        component:() =>
+            import("../views/Land/login")
+      },
+      {
+        path: "/land/register",
+        name: "Register",
+        component:() =>
+            import("../views/Land/register")
+      }
+    ]
+  }
 
 ];
 

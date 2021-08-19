@@ -11,7 +11,7 @@
           <span class="test1"><i>*</i>确认是否退出登陆</span>
         </div>
         <div class="box-btn">
-          <button @click="commitAlertBox" class="ok">提交</button>
+          <router-link to="/land/landing" class="ok">确定</router-link>
           <button @click="closeAlertBox" class="no">取消</button>
         </div>
       </div>
@@ -121,6 +121,7 @@ export default {
     cursor: pointer;
     background: #0066ff;
     color: #ffffff;
+    text-decoration: none;
   }
   .no{
     width: 25%;
@@ -145,4 +146,5 @@ export default {
     height: 100%;
     background: rgba(0,0,0,0.2);
   }
+
 </style>

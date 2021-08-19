@@ -64,9 +64,10 @@ export default {
     margin-top: -10%;
   }
   .safetytop{
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     height: 150px;
     width: 98%;
+    border-radius: 5px;
   }
   .safetytop01{
     padding: 20px;

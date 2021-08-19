@@ -11,26 +11,20 @@
     </router-link>
 
     <div class=" setting-middle">
-
           <router-link to="/about/setting/safety" class="rlink">
             <div class="safety">
               账号与安全
               <img src="@/assets/img/about/setting-next.svg" alt="this is a picture" >
             </div>
           </router-link>
-
-
       <hr />
-
           <router-link to="/about/setting/software" class="rlink">
             <div class="safety">
               关于软件
               <img src="@/assets/img/about/setting-next.svg" alt="this is a picture">
             </div>
           </router-link>
-
       <hr />
-
           <router-link to="/about/setting/theme" class="rlink">
             <div class="safety">
               主题换肤
@@ -83,7 +77,7 @@ export default {
     margin: auto;
   }
   .personal{
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     width: 98%;
     height: 85px;
     border-radius: 5%;
@@ -122,10 +116,11 @@ export default {
     margin-top: -10px;
   }
   .setting-middle{
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     width: 98%;
     margin-top: 20px;
     height: 200px;
+    border-radius: 5px;
   }
   .safety{
     font-size: 18px;
@@ -136,18 +131,20 @@ export default {
   .button{
     margin-top: 20px;
     width: 98%;
-    border-radius: 5%;
+    border-radius: 5px;
   }
   .cut{
     font-size: 18px;
     padding: 10px;
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
+    border-radius: 5px;
   }
   .exit{
     font-size: 18px;
-    background-color: white;
+    background-color: rgba(250,250,250,0.5);
     padding: 10px;
     margin-top: 10px;
+    border-radius: 5px;
   }
   .rlink{
     text-decoration: none;

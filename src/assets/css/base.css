@@ -1,3 +1,6 @@
 body{
-    background-color: #f0f8ff;
+    background: url("https://img1.baidu.com/it/u=1494986593,2576107677&fm=26&fmt=auto&gp=0.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
 }
